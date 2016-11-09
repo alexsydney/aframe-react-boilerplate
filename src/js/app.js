@@ -13,7 +13,11 @@ import Sky from './components/Sky';
 class VRScene extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {color: 'red'};
+
+    // Only fields used in render() should be in this.state
+    this.state = {
+      color: 'red'
+    };
   }
 
   changeColor() {
