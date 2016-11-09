@@ -7,7 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Camera from './components/Camera';
-import Text from './components/Text';
+import {TextWelcome} from './components/TextWelcome'; // named export (non-default) is imported using brackets
 import Sky from './components/Sky';
 
 class VRScene extends React.Component {
@@ -33,10 +33,7 @@ class VRScene extends React.Component {
 
         <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>
 
-        <Text
-          text='Hello World!'
-          color='#DADADA'
-          position='-1.75 1 -3'/>
+        <TextWelcome />
 
         <Entity light={{type: 'ambient', color: '#888'}}/>
         <Entity light={{type: 'directional', intensity: 0.5}} position='-1 1 0'/>
@@ -59,4 +56,7 @@ class VRScene extends React.Component {
   }
 }
 
-ReactDOM.render(<VRScene/>, document.querySelector('.scene-container'));
+ReactDOM.render(
+    <VRScene/>,
+    document.querySelector('.scene-container')
+);
