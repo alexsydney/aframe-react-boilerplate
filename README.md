@@ -15,4 +15,7 @@ npm install
 npm run serve
 ```
 
-Then head over to `http://localhost:9090`.
+Open `http://localhost:9090`.
+
+* Point towards the rotating box and click it to change its colour
+* Point towards the "ON/OFF" button and click it toggle

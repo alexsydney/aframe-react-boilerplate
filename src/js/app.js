@@ -7,8 +7,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Camera from './components/Camera';
-import {TextWelcome} from './components/TextWelcome'; // named export (non-default) is imported using brackets
 import Sky from './components/Sky';
+
+import {TextWelcome} from './components/TextWelcome'; // named export (non-default) is imported using brackets
+import {Toggle} from './components/Toggle';
 
 class VRScene extends React.Component {
   constructor(props) {
@@ -38,6 +40,7 @@ class VRScene extends React.Component {
         <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>
 
         <TextWelcome />
+        <Toggle />
 
         <Entity light={{type: 'ambient', color: '#888'}}/>
         <Entity light={{type: 'directional', intensity: 0.5}} position='-1 1 0'/>

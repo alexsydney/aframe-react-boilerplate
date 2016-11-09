@@ -23,12 +23,12 @@ export class TextWelcome extends React.Component {
     tick() {
         this.setState({ date: new Date() }); // run every second
     }
+
     render () {
         return (
-            <Text
-                text={this.state.message + ' ' + this.state.date.toLocaleTimeString()}
-                color='#DADADA'
-                position='-1.75 1 -3'/>
+            <Text text={this.state.message + ' ' + this.state.date.toLocaleTimeString()}
+                  color='#DADADA'
+                  position='-1.75 1 -3'/>
         );
     }
 }
